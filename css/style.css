@@ -1,0 +1,312 @@
+@font-face { font-family: Orbitron-Bold; src: url('./Orbitron-Bold.ttf'); } 
+/*-------------------------
+	Simple reset
+--------------------------*/
+
+
+*{
+	margin:0;
+	padding:0;
+}
+
+
+/*-------------------------
+	General Styles
+--------------------------*/
+
+
+html{
+	background:url('../img/bg.jpg') #dbe4e6;
+	overflow:hidden;
+}
+
+body{
+	font:15px/1.3 Arial, sans-serif;
+	color: #4f4f4f;
+	z-index:1;
+}
+
+a, a:visited {
+	outline:none;
+	color:#389dc1;
+}
+
+a:hover{
+	text-decoration:none;
+}
+
+section, footer, header, aside{
+	display: block;
+}
+
+
+/*-------------------------
+	The clocks
+--------------------------*/
+
+
+#clock{
+	
+        padding: 40px;
+}
+
+#clock:after{
+	content:'';
+	position:absolute;
+	width:400px;
+	height:20px;
+	border-radius:100%;
+	left:50%;
+	margin-left:-200px;
+	bottom:2px;
+	z-index:-1;
+}
+
+
+#clock .display{
+	text-align: center;
+	padding: 27px 20px 36px;
+	border-radius: 6px;
+	position: relative;
+}
+
+
+/*-------------------------
+	Light color theme
+--------------------------*/
+
+
+#clock.light{
+	background-color:#f3f3f3;
+	color:#272e38;
+}
+
+
+
+#clock.light .digits div span{
+	background-color:#272e38;
+	border-color:#272e38;	
+}
+
+#clock.light .digits div.dots:before,
+#clock.light .digits div.dots:after{
+	background-color:#272e38;
+}
+
+
+
+#clock.light .display{
+	background-color:#dddddd;
+}
+
+
+
+/*-------------------------
+	The Alarm
+--------------------------*/
+
+
+#clock .alarm{
+	width: 35px;
+	height:16px;
+	bottom: 22px;
+	position:absolute;
+	opacity:0.2;
+}
+
+#clock .alarm.active{
+	opacity:1;
+}
+
+
+/*-------------------------
+	Weekdays
+--------------------------*/
+
+
+#clock .weekdays{
+	font-size:12px;
+	position:absolute;
+	width:100%;
+	top:10px;
+	left:0;
+	text-align:center;
+}
+
+
+#clock .weekdays span{
+	opacity:0.2;
+	padding: 0 8px;
+}
+
+#clock .weekdays span.active{
+	opacity:1;
+}
+
+
+/*-------------------------
+		AM/PM
+--------------------------*/
+
+
+#clock .ampm{
+	position:absolute;
+	bottom:20px;
+	right: 28px;
+	font-size: 18px;
+}
+
+
+/*-------------------------
+		Button
+--------------------------*/
+
+
+.button-holder{
+	text-align:center;
+	padding-bottom:100px;
+}
+
+a.button{
+	background-color:#f6a7b3;
+	
+	background-image:-webkit-linear-gradient(top, #f6a7b3, #f0a3af);
+	background-image:-moz-linear-gradient(top, #f6a7b3, #f0a3af);
+	background-image:linear-gradient(top, #f6a7b3, #f0a3af);
+
+	border:1px solid #eb9ba7;
+	border-radius:2px;
+
+	box-shadow:0 2px 2px #ccc;
+
+	color:#fff;
+	text-decoration: none !important;
+	padding:15px 20px;
+	display:inline-block;
+	cursor:pointer;
+}
+
+a.button:hover{
+	opacity:0.9;
+}
+
+.vcenter {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+}
+
+#countdown {
+        color: #000000;
+        font-family: Orbitron-Bold, sans-serif;
+}
+
+#countdown span {
+        color: #000000;
+        font-size: 50px;
+        margin-left: 5px;
+        margin-right: 5px;
+}
+
+#countdown  b{
+        color: #000000;
+        font-size: 50px;
+}
+.size-icon {
+       font-size: x-large;
+}
+.alarm-time{
+    position: absolute;
+}
+.alarm-select{
+    position: absolute;
+    width: 45px;
+}
+
+.hours-alarm{
+    left: 30px;
+    top: -1px;
+    height: 24px;
+}
+.minutes-alarm{
+    left: 68px;
+    top: -1px;
+    height: 24px;
+}
+.imgen-alarm{
+     position: absolute;
+     width: 36px;
+     left: 106px;
+     top: -1px;
+     height: 24px;
+}
+.input-group-addon{
+    padding: 3px 9px;
+}
+.bell-color{
+    color: #c12e2a;
+}
+.pointer         { 
+    cursor: pointer; }
+.minutes-alarm{
+     border-left: 0px;
+    border-radius: 0 0;
+}
+
+@media (min-width: 768px) and (max-width: 850px) { 
+#countdown span {
+        font-size: 3em;
+}
+#countdown  b{
+        font-size: 3em;
+}
+#clock .weekdays{
+    font-size: 0.8em;
+}
+}
+@media  (max-width: 450px) { 
+#countdown span {
+        font-size: 2em;
+}
+#countdown  b{
+        font-size: 2em;
+}
+#clock .weekdays{
+        font-size: 0.5em;
+}
+
+#clock .weekdays span{
+        padding: 0 8px;
+}
+#clock .display{
+        padding:27px 20px 20px;
+}
+#clock .ampm{
+    font-size:12px;
+    bottom: 10px;
+}
+.size-icon{
+    font-size: medium;
+}
+#clock .alarm{
+    bottom: 10px;
+}
+.hours-alarm{
+    height: 15px;
+    top: -5px;
+    font-size: 10px;
+}
+.minutes-alarm{
+    height: 15px;
+    top: -5px;
+    font-size: 10px;
+}
+.imgen-alarm{
+    height: 15px;
+    top: -5px;
+    font-size: 10px;
+    padding:1px;
+}
+}
+
