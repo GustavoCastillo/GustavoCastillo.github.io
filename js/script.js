@@ -85,7 +85,7 @@ setInterval(function () {
 			// Add the digit elements to the page
 			digit_holder.append(pos);
 		}
-
+              $('.alarm-select').css('display', 'initial')  ;   
 	});
 
 	// Add the weekday names

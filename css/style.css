@@ -112,6 +112,7 @@ section, footer, header, aside{
 	bottom: 22px;
 	position:absolute;
 	opacity:0.2;
+        
 }
 
 #clock .alarm.active{
@@ -222,6 +223,7 @@ a.button:hover{
 .alarm-select{
     position: absolute;
     width: 45px;
+    display:none;
 }
 
 .hours-alarm{
