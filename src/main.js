@@ -9,7 +9,7 @@ var mainModule = {
             var me = this;
 
 
-           $(me.progressBar).animate({width:  $(me.progressBar).attr("aria-valuenow") + "%"}, 2500);
+           $(me.progressBar).animate({width:  $(me.progressBar).attr("aria-valuenow") + "%"}, 7000);
 
             $(me.skill).css("left",
                 function () {
